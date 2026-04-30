@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Peace Training Centre, Jos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="peace-symbol">☮</div>
+            <div class="loading-text">Loading Gallery...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-img">
+                        <img src="Images/PTC_Logo.jpeg" alt="PTC Logo" id="logo-img">
+                    </div>
+                    <div class="logo-text">
+                        <h1>PTC</h1>
+                        <p>Peace Training Centre, Jos</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                    <a href="activities.html" class="nav-link">
+                        <i class="fas fa-tasks"></i> Activities
+                    </a>
+                    <a href="gallery.html" class="nav-link active">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                    <a href="courses.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i> Courses
+                    </a>
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="activities.html" class="mobile-nav-link">
+                    <i class="fas fa-tasks"></i> Activities
+                </a>
+                <a href="gallery.html" class="mobile-nav-link active">
+                    <i class="fas fa-images"></i> Gallery
+                </a>
+                <a href="courses.html" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i> Courses
+                </a>
+                <a href="contact.html" class="mobile-nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Photo Gallery</span>
+                </div>
+                <h1 class="gallery-hero-title">Photo Gallery</h1>
+                <p class="gallery-hero-subtitle">
+                    Capturing moments from our journey of building peace, transforming lives
+                </p>
+                <div class="gallery-stats">
+                    <div class="gallery-stat">
+                        <i class="fas fa-images"></i>
+                        <span>50+ Photos</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2016-Present</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Multiple Locations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Gallery</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Moments from our training sessions, community events, and peace initiatives
+                </p>
+            </div>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Photos
+                </button>
+                <button class="filter-btn" data-filter="training">
+                    <i class="fas fa-graduation-cap"></i> Training
+                </button>
+                <button class="filter-btn" data-filter="events">
+                    <i class="fas fa-calendar-alt"></i> Events
+                </button>
+                <button class="filter-btn" data-filter="community">
+                    <i class="fas fa-users"></i> Community
+                </button>
+                <button class="filter-btn" data-filter="workshops">
+                    <i class="fas fa-chalkboard-teacher"></i> Workshops
+                </button>
+                <button class="filter-btn" data-filter="graduation">
+                    <i class="fas fa-user-graduate"></i> Graduation
+                </button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-img">
+                        <img src="Images/Image 1.JPG" alt="Training Session" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Conflict Resolution Training</h4>
+                                <p>Participants engaged in role-playing exercises</p>
+                                <button class="view-btn" data-image="1">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Conflict Resolution Training</h4>
+                        <p>Training Session</p>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-img">
+                        <img src="Images/Image 2.JPG" alt="Peace Conference" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Annual Peace Conference</h4>
+                                <p>2023 Conference participants</p>
+                                <button class="view-btn" data-image="2">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Annual Peace Conference</h4>
+                        <p>2023 Event</p>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-img">
+                        <img src="Images/Image 3.JPG" alt="Community Dialogue" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Community Dialogue Session</h4>
+                                <p>Interfaith dialogue in progress</p>
+                                <button class="view-btn" data-image="3">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Community Dialogue Session</h4>
+                        <p>Community Engagement</p>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-img">
+                        <img src="Images/Image 4.JPG" alt="Graduation Ceremony" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>DELPAP Graduation</h4>
+                                <p>Batch 2022 graduates celebration</p>
+                                <button class="view-btn" data-image="4">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>DELPAP Graduation</h4>
+                        <p>Graduation Ceremony</p>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-img">
+                        <img src="Images/Image 5.JPG" alt="Leadership Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Leadership Workshop</h4>
+                                <p>Youth leadership training session</p>
+                                <button class="view-btn" data-image="5">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Leadership Workshop</h4>
+                        <p>Workshop Session</p>
+                    </div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-img">
+                        <img src="Images/Image 6.JPG" alt="Tree Planting" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Peace Tree Planting</h4>
+                                <p>Symbolic tree planting ceremony</p>
+                                <button class="view-btn" data-image="6">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Peace Tree Planting</h4>
+                        <p>Community Activity</p>
+                    </div>
+                </div>
+                
+                <!-- Add more images as needed -->
+                <!-- Image 7 -->
+                <div class="gallery-item" data-category="training">
+                    <div class="gallery-img">
+                        <img src="Images/Annual-Peace.JPG" alt="Annual Peace Training" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Annual Peace Training</h4>
+                                <p>October training sessions</p>
+                                <button class="view-btn" data-image="7">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Annual Peace Training</h4>
+                        <p>Training Program</p>
+                    </div>
+                </div>
+                
+                <!-- Image 8 -->
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-img">
+                        <img src="Images/Church Leaders Workshop.JPG" alt="Church Leaders Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Church Leaders Workshop</h4>
+                                <p>Interdenominational workshop</p>
+                                <button class="view-btn" data-image="8">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Church Leaders Workshop</h4>
+                        <p>Workshop Session</p>
+                    </div>
+                </div>
+                
+                <!-- Image 9 -->
+                <div class="gallery-item" data-category="graduation">
+                    <div class="gallery-img">
+                        <img src="Images/DELPAP Program.JPG" alt="DELPAP Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>DELPAP Program</h4>
+                                <p>Development Education Leadership Program</p>
+                                <button class="view-btn" data-image="9">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>DELPAP Program</h4>
+                        <p>Training Program</p>
+                    </div>
+                </div>
+                
+                <!-- Image 10 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-img">
+                        <img src="Images/PeTCAAN Activities.jpg" alt="PeTCAAN Activities" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>PeTCAAN Activities</h4>
+                                <p>Alumni association activities</p>
+                                <button class="view-btn" data-image="10">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>PeTCAAN Activities</h4>
+                        <p>Alumni Events</p>
+                    </div>
+                </div>
+                
+                <!-- Image 11 -->
+                <div class="gallery-item" data-category="community">
+                    <div class="gallery-img">
+                        <img src="Images/Community Dialogues.jpg" alt="Community Dialogues" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Community Dialogues</h4>
+                                <p>Facilitating community discussions</p>
+                                <button class="view-btn" data-image="11">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Community Dialogues</h4>
+                        <p>Community Engagement</p>
+                    </div>
+                </div>
+                
+                <!-- Image 12 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-img">
+                        <img src="Images/Research & Advocacy.JPG" alt="Research & Advocacy" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h4>Research & Advocacy</h4>
+                                <p>Policy research activities</p>
+                                <button class="view-btn" data-image="12">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Research & Advocacy</h4>
+                        <p>Research Activities</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <!-- <div class="text-center load-more-container">
+                <button class="btn btn-secondary load-more-btn">
+                    <span>Load More Photos</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <p class="photo-count">Showing 12 of 50+ photos</p>
+            </div> -->
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div class="lightbox-modal">
+            <div class="lightbox-content">
+                <button class="lightbox-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="lightbox-navigation">
+                    <button class="lightbox-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="lightbox-image-container">
+                    <img src="" alt="" class="lightbox-image">
+                    <div class="lightbox-caption">
+                        <h3 class="lightbox-title"></h3>
+                        <p class="lightbox-description"></p>
+                        <div class="lightbox-meta">
+                            <span class="lightbox-category"></span>
+                            <span class="lightbox-date"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-img">
+                            <img src="Images/PTC_Logo.jpeg" alt="PTC Logo">
+                        </div>
+                        <div class="logo-text">
+                            <h3>PTC, Jos</h3>
+                            <p>Peace Training Centre</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        A capacity development centre for peace, justice, leadership and community engagement, fostering a culture of peace and understanding in Nigeria.
+                    </p>
+                    <p style="margin-top: 1rem; color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">
+                        <i class="fas fa-certificate"></i> CAC Registered 2019
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Activities</h4>
+                    <ul class="footer-links">
+                        <li><a href="activities.html">Annual Peace Training</a></li>
+                        <li><a href="courses.html">DELPAP Program</a></li>
+                        <li><a href="activities.html">Church Leaders Workshop</a></li>
+                        <li><a href="activities.html">PeTCAAN Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Peace Training Centre, Jos, Plateau State, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 803 442 6346</p>
+                    <p><i class="fas fa-envelope"></i> ptcjos2016@gmail.com</p>
+                    
+                    <!-- Newsletter -->
+                    <div class="newsletter" style="margin-top: 1.5rem;">
+                        <h5>Stay Updated</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016-2024 Peace Training Centre, Jos. All rights reserved. | CAC Registered 2019</p>
+                <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6); margin-right: 1rem;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6);">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
