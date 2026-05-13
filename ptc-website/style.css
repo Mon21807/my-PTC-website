@@ -2331,3 +2331,341 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.85rem;
     }
 }
+
+/* ===== DELPAP PHASE 1 SECTION ===== */
+.delpap-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8edf5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.delpap-section::before {
+    content: '☮';
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.03;
+    bottom: -50px;
+    right: -50px;
+    pointer-events: none;
+}
+
+.delpap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.delpap-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.delpap-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.delpap-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.delpap-header .section-divider {
+    background: #fbbf24;
+    margin: 15px auto;
+}
+
+/* Poster Animation */
+.delpap-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.delpap-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-animation {
+    position: relative;
+    animation: floatPoster 3s ease-in-out infinite;
+}
+
+@keyframes floatPoster {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.delpap-poster-img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.delpap-poster-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.poster-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 30px;
+    background: radial-gradient(circle, rgba(26,86,219,0.2), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Info Cards */
+.delpap-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.info-text p {
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.deadline {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 12px;
+    background: #fee2e2;
+    color: #dc2626;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.who-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.who-list span {
+    background: white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease;
+}
+
+.who-list span:hover {
+    transform: scale(1.05);
+    background: var(--primary);
+    color: white;
+}
+
+/* Gains Section */
+.delpap-gains {
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+}
+
+.delpap-gains h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.gains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gain-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.gain-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gain-item i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+/* Call to Action */
+.delpap-cta {
+    padding: 30px 40px;
+    text-align: center;
+    background: #fff8e7;
+    border-top: 1px solid #e5e7eb;
+}
+
+.cta-text i {
+    font-size: 2rem;
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+.cta-text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.cta-text h4 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.cta-contact {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.cta-phone, .cta-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cta-phone:hover, .cta-email:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .delpap-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .delpap-poster {
+        order: -1;
+    }
+    
+    .delpap-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .delpap-section {
+        padding: 50px 0;
+    }
+    
+    .delpap-content {
+        padding: 25px;
+    }
+    
+    .delpap-gains, .delpap-cta {
+        padding: 25px;
+    }
+    
+    .gains-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .who-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .delpap-title {
+        font-size: 1.8rem;
+    }
+    
+    .delpap-subtitle {
+        font-size: 1rem;
+    }
+}
